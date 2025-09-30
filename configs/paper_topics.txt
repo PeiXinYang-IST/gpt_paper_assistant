@@ -1,22 +1,22 @@
- 1. New methodological improvements to RLHF or instruction-following which are specific fine-tuning steps that are taken to make language models better at following user instructions across a range of tasks.
-    - Relevant: papers that discuss specific methods like RLHF, or instruction-tuning datasets, improving these methods, or analyzing them. Usually these papers will explicitly mention RLHF, instruction-following or instruction-tuning.
-    - Not relevant: papers about adaptation to some task. Simply following instructions or inputs are not sufficient.
- 2. Shows new powerful test set contamination or membership inference methods for language models. Test set contamination is the phenomenon where a language model observes a benchmark dataset during pretraining.
-    - Relevant: test statistics that can detect contamination of benchmarks in language models. statistics that can provide guarantees are more interesting. membership inference methods that are general enough to apply to language models are also relevant.
-    - Not relevant: any papers that do not consider language models, or that do not consider test set contamination.
- 3. Shows a significant advance in the performance of diffusion language models.
-    - Relevant: papers that study language models that are also diffusion models. Continuous diffusions are even more relevant, while discrete diffusions are less so.
-    - Not relevant: papers about image diffusions like DALL-E or Stable Diffusion, or papers that do not explicitly mention language models or applications to text.
- 4. Describes new paradigms to evaluating open-ended text generation. Evaluating the outputs of language models is hard, especially in open-ended settings like for chatbots.
-    - Relevant: papers that fundamentally rethink language model evaluation -- especially by accounting for subjectivity or using adversaries.
-    - Not relevant: specific evaluations for specific tasks, identifying new properties or flaws of language models, or simply collecting new data.
- 5. Conducts surveys or provides data into real-world usage and safety properties of language models.
-    - Relevant: papers that create new datasets or surveys on real-world usage of language models.
-    - Not relevant: papers that apply language models to new real-world tasks.
- 6. Studies 'scaling laws' in the context of neural networks. Scaling laws refer to the very clear power-law relationship between the size or computational power used to train a model and the performance of that model.
-    - Relevant: theoretical or conceptual explanation behind scaling laws for language models.
-    - Not relevant: papers that have experiments at different model scales (but do not explicitly fit a scaling law) or papers that mention scaling laws, but the scaling laws are not the central subject of the paper
+1. 路径规划（Path Planning）的新算法或优化方法，尤其适用于动态环境或多智能体系统。
+   - Relevant：涉及A*、RRT*/RRT-Connect、D*等算法的改进，动态障碍物规避，多机器人协同路径规划。
+   - Not relevant：仅针对静态环境的基础路径搜索，无算法创新的应用研究。
 
- In suggesting papers to your friend, remember that he enjoys papers on statistical machine learning, and generative modeling in natural language processing.
- Your friend also likes learning about surprising empirical results in language models, as well as clever statistical tricks.
- He does not want to read papers that are about primarily applications of methods to specific domains.
+2. 轨迹规划（Trajectory Planning）的平滑性、可行性或实时性提升方法。
+   - Relevant：连续轨迹优化（如贝塞尔曲线、样条曲线）、动力学约束下的轨迹生成，轨迹跟踪控制结合。
+   - Not relevant：单纯的路径点连接，不涉及轨迹平滑或动力学约束的研究。
+
+3. 强化学习（Reinforcement Learning）在机器人决策与控制中的应用。
+   - Relevant：深度强化学习（DRL）在路径/轨迹规划中的应用，探索-利用策略优化，多任务强化学习。
+   - Not relevant：纯理论的强化学习算法改进（无机器人/控制场景），非决策类任务（如图像识别）。
+
+4. 同步定位与地图构建（SLAM）的精度提升或计算效率优化。
+   - Relevant：视觉SLAM、激光SLAM的回环检测改进，动态环境鲁棒性提升，低功耗设备适配。
+   - Not relevant：仅使用SLAM作为工具的应用研究（如导航系统集成，无SLAM算法创新）。
+
+5. 端到端（End-to-End）控制在机器人导航中的新框架。
+   - Relevant：从传感器输入直接输出控制指令的端到端模型（如CNN+LSTM、Transformer架构），数据驱动的端到端优化。
+   - Not relevant：分模块拼接的系统（如先SLAM再规划再控制），非端到端的传统 pipeline 研究。
+
+# 补充：用户兴趣倾向
+你的朋友关注实际机器人应用场景（如自动驾驶、移动机器人），偏好结合仿真与真实环境实验的论文，对理论与工程落地结合的研究更感兴趣。

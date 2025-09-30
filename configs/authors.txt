@@ -1,9 +1,7 @@
-# Stanford NLP faculty.
-Tatsunori B. Hashimoto, 3056528
-Tatsunori Hashimoto, 2117567142
-Percy Liang, 145419642
-Dan Jurafsky, 1746807
-Christopher D. Manning, 144783904
-Chris Potts, 1741530
-Diyi Yang, 2022168
-Monica Lam, 39682108
+# 格式：作者名, 语义学者ID（从语义学者页面URL获取，如https://www.semanticscholar.org/author/XXX中的XXX）
+Sebastian Thrun, 142920007
+Raia Hadsell, 176466877
+Karel Zimmermann, 210812077
+Cyrill Stachniss, 174266777
+Jianwei Zhang, 213564071
+Leslie Pack Kaelbling, 544997
