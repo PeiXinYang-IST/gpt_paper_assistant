@@ -7,7 +7,6 @@ on:
     types:
       - completed
 
-
 permissions: write-all
 
 jobs:
@@ -19,12 +18,12 @@ jobs:
     outputs:
       file-exists: ${{steps.file-check.outputs.file_exists}}
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4  # 升级 checkout 到最新稳定版
     - name: Download artifact
       id: download-artifact
       uses: dawidd6/action-download-artifact@v2
       with:
-        workflow: cron_runs.yaml
+        workflow: "Run daily arxiv"  # 注意：使用工作流名称而非文件名（与之前问题保持一致）
         workflow_conclusion: success
         name: arxiv-scanner-outputs
     - name: Display structure of downloaded files
@@ -40,10 +39,10 @@ jobs:
       with:
        token: ${{ secrets.GITHUB_TOKEN }}
        file: output.md
-    - uses: actions/upload-pages-artifact@v2
+    - uses: actions/upload-pages-artifact@v3  # 升级 pages 专用上传动作到 v3
       if: steps.check_files.outputs.files_exists == 'true'
       with:
         path: dist
-    - uses: actions/deploy-pages@v1
+    - uses: actions/deploy-pages@v2  # 升级部署动作到 v2（最新稳定版）
       if: steps.check_files.outputs.files_exists == 'true'
       id: deployment
